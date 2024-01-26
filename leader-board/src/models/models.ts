@@ -8,6 +8,7 @@ export type Competitor = {
     losses: number;
     draws: number;
     rating: number;
+    popularity: number;
     badges: Badge[];
     avatar: string;
 }
@@ -24,8 +25,8 @@ export const demoCompetitor: Competitor = {
         { code: "titanic_strength", name: "Titanic Strength Badge", description: "Awarded for winning at least one match without receiving any hits." },
         { code: "triple_victory", name: "Triple Victory Badge", description: "Granted for achieving three consecutive wins in the competition." }
     ],
-    avatar: fox
-    
+    avatar: fox,
+    popularity: 320987,
 };
 
 

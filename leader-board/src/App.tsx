@@ -1,8 +1,6 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
-import CompetitorCard from './components/competitor-card'
+import CompetitorCard from './components/competitor-card/CompetitorCard'
 import { demoCompetitor } from './models/models'
 
 function App() {
