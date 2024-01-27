@@ -1,6 +1,9 @@
 
 import React from 'react';
-import { Competitor } from '../../models/models';
+import { Badge, Competitor } from '../../models/models';
+import RatioBar from './RatioBar';
+import { BADGES } from '../../models/models';
+import BadgesArea from './BadgesArea';
 
 type CompetitorCardProps = {
     competitor: Competitor;
@@ -9,23 +12,26 @@ type CompetitorCardProps = {
 
 export default function CompetitorCard({ competitor }: CompetitorCardProps): JSX.Element {
     const { name, bio, avatar, wins, losses, popularity, badges } = competitor;
-    const ratio = (100 * (wins / (wins + losses))).toFixed(2);
+    let badgeObjects: Badge[] = badges.map(b => BADGES.find(badge => badge.code === b));
+    if (badgeObjects === undefined) {
+        badgeObjects = [];
+    }
+    const ratio = (100 * (wins / (wins + losses)));
     return (
         <>
             <div className='competitor-card'>
                 <div className='avatar-wrapper'>
-                    <img src={avatar} alt={name} />
-                    <h1>{name}</h1>
+                    <img src={avatar} height={200} alt={name} />
+                    <span className='name'>{name}</span>
                 </div>
-                <h3>{bio}</h3>
-                <div>win ratio: {wins}/{wins + losses} ({ratio}%)</div>
+                <div className='bio'>{bio}</div>
+                <div className='stats-wrapper'>
+                    <div>win ratio: {wins}/{wins + losses} ({ratio.toFixed(2)}%)</div>
+                    <RatioBar ratio={ratio} />
+                    <BadgesArea badges={badgeObjects} />
+                </div>
                 <div>popularity: {popularity}</div>
-                <div>{badges.map(badge =>
-                    <div>
-                        <h4>{badge.name}</h4>
-                    <img src={badge} alt='badge' />
-                    </div>
-                )}</div>
+
             </div>
         </>
     )

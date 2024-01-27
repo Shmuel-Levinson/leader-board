@@ -9,8 +9,60 @@
   margin: 1rem;
   display: flex;
   flex-direction: row;
+  gap: 20px;
+  justify-content: space-between;
   background-color:rgb(57, 55, 52);
   border-radius: 20px;
   padding: 1rem;
   box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+
+}
+
+.avatar-wrapper {
+  /* border-radius: 20px; */
+  border: 1px solid orange;
+  padding: 20px;
+  
+}
+
+.name{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+.bio{
+  font-size: 1rem;
+  border: 1px solid orange;
+  color: white;
+  text-align:justify;
+}
+.badge-name{
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  text-align:justify;
+  text-transform: uppercase;
+}
+
+.badges-area{
+  display: flex;
+  flex-direction: row;
+  width: 600px;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  border: 1px solid orange;
+  padding: 20px;
+}
+
+.badge-wrapper{
+  border: 1px solid orange;
+  padding: 20px;
+  margin: 10px;
+  width:100px;
+  border-radius: 20px;
+}
+
+.stats-wrapper{
+  flex: 1;
+  border: 1px solid orange;
 }
