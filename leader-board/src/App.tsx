@@ -4,7 +4,7 @@ import CompetitorCard from './components/competitor-card/CompetitorCard'
 import { foxDemo, wolfDemo } from './models/models'
 // import api from '../src/api'
 // const allCompetitors = api.getAllCompetitors()
-const allCompetitors = [foxDemo,wolfDemo]
+const allCompetitors = [foxDemo,wolfDemo,foxDemo,wolfDemo]
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
         {
           allCompetitors.map((competitor) => (
             <CompetitorCard competitor={competitor} />
+            
           ))
         }
       </div>
