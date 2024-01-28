@@ -8,7 +8,7 @@ export default function BadgesArea({ badges }: { badges: Badge[] }) {
                 return (<div className='badge-wrapper' key={badge!.name} title={badge!.description}>
                     <div >
                         <img
-                            style={{ width: '100px', height: '100px' }}
+                            style={{ width: '150px', height: '150px' }}
                             src={badge!.image}
                             alt='badge' />
                     </div>

@@ -26,12 +26,14 @@ export default function CompetitorCard({ competitor }: CompetitorCardProps): JSX
                 </div>
                 <div className='bio'>{bio}</div>
                 <div className='stats-wrapper'>
-                    <div>win ratio: {wins}/{wins + losses} ({ratio.toFixed(2)}%)</div>
-                    <RatioBar ratio={ratio} />
+                    <div className='ratio-container'>
+                        <div>win ratio: {wins}/{wins + losses} ({ratio.toFixed(2)}%)</div>
+                        <RatioBar ratio={ratio} />
+                    </div>
+
                     <BadgesArea badges={badgeObjects} />
                 </div>
                 <div>popularity: {popularity}</div>
-
             </div>
         </>
     )

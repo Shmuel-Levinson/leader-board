@@ -1,6 +1,8 @@
 import fox from "../assets/avatars/fox.png";
+import wolf from "../assets/avatars/wolf.png";
 import titanicBadge from "../assets/badges/titanic_strength.png";
 import tripleVictoryBadge from "../assets/badges/triple_victory.png";
+import innovativeTactics from "../assets/badges/innovative-tactics.png";
 
 export type Competitor = {
   id: string;
@@ -15,7 +17,7 @@ export type Competitor = {
   avatar: string;
 };
 
-export const demoCompetitor: Competitor = {
+export const foxDemo: Competitor = {
   id: "comp123",
   name: "BlazeFang",
   bio: "BlazeFang, a swift and cunning cyber-fox, is known for her agile maneuvers and strategic play. She outsmarts her opponents with intelligence and speed.",
@@ -27,6 +29,19 @@ export const demoCompetitor: Competitor = {
   avatar: fox,
   popularity: 320987,
 };
+
+export const wolfDemo: Competitor = {
+    id: "comp125",
+    name: "ElectroShock",
+    bio: "ElectroShock, the electric wolf, dazzles with his speed and shocking attacks. His energetic style electrifies the arena.",
+    wins: 27    ,
+    losses: 19,
+    draws: 5,
+    rating: 92,
+    badges: ["innovative_tactics", "triple_victory"],
+    avatar: wolf,
+    popularity: 200000,
+}
 
 export type Badge = {
   code: string;
@@ -67,5 +82,6 @@ export const BADGES: Badge[] = [
     name: "Innovative Tactics",
     description:
       "Given for demonstrating a unique and effective fighting strategy in a match.",
+      image: innovativeTactics,
   },
 ];

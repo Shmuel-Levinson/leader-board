@@ -2,7 +2,7 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .competitor-card {
@@ -19,25 +19,28 @@
 }
 
 .avatar-wrapper {
-  /* border-radius: 20px; */
+  /* border-radius: 10px; */
+  /* overflow: hidden; */
   border: 1px solid orange;
-  padding: 20px;
-  
+  color: rgb(234, 68, 68);
+  /* padding: 20px; */
+  text-align: center;
 }
 
 .name{
   font-size: 1.5rem;
   font-weight: bold;
   color: white;
+  
 }
 .bio{
   font-size: 1rem;
   border: 1px solid orange;
   color: white;
-  text-align:justify;
+  text-align:left;
 }
 .badge-name{
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-weight: bold;
   color: white;
   text-align:justify;
@@ -55,14 +58,28 @@
 }
 
 .badge-wrapper{
-  border: 1px solid orange;
-  padding: 20px;
-  margin: 10px;
-  width:100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid orange; */
+  /* padding: 20px; */
+  /* margin: 10px; */
+  width:200px;
+  height: 200px;;
   border-radius: 20px;
 }
 
 .stats-wrapper{
   flex: 1;
   border: 1px solid orange;
+}
+
+.ratio-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid orange;
+  /* padding: 20px; */
+
 }
